@@ -1,1 +1,21 @@
+# Dependencies
 node_modules
+
+# Angular build artifacts
+.angular/
+dist/
+tmp/
+out-tsc/
+
+# IDEs (optional - can customize per team preference)
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# System Files
+.DS_Store
+Thumbs.db
