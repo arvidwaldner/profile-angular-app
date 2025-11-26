@@ -1,5 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, OnInit, PLATFORM_ID, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +9,19 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('profile-angular-app');
+export class App implements OnInit {
+  protected readonly title = signal('Profile - Arvid Waldner');
+  private platformId = inject(PLATFORM_ID);
+
+  ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      AOS.init({
+        duration: 1000,
+        once: false,
+        offset: 120,
+        mirror: true,
+        easing: 'ease-out-cubic'
+      });
+    }
+  }
 }
