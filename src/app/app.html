@@ -14,11 +14,8 @@
           <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#skills">Skill summary</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
+          <a class="nav-link" href="#skills">Skills summary</a>
+        </li>        
       </ul>
     </div>
   </div>
@@ -40,11 +37,7 @@
           <a href="#skills" class="btn btn-outline-primary btn-lg">
             <i class="bi bi-code-square me-2"></i>
             His skills summary
-          </a>
-          <a href="#contact" class="btn btn-outline-primary btn-lg">
-            <i class="bi bi-envelope me-2"></i>
-            Contact him
-          </a>
+          </a>          
         </div>
         <div class="social-links" data-aos="fade-right" data-aos-delay="300">
           <a href="https://github.com/arvidwaldner" target="_blank" rel="noopener" class="text-dark me-3">
@@ -213,78 +206,180 @@
 
 <section id="skills" class="position-relative" style="padding-top: 8rem; padding-bottom: 5rem;">
   <div class="container">
-    <h2 class="text-center mb-5">Skills Summary - Tech Stacks</h2>            
-    <div class="table-responsive" data-aos="fade-up" data-aos-delay="100">
-      <table class="table table-hover table-bordered align-middle">
-        <thead style="background-color: #1976d2; color: white;">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col"><i class="bi bi-code-slash me-2"></i>Skill</th>
-            <th scope="col"><i class="bi bi-calendar-check me-2"></i>Years</th>
-            <th scope="col"><i class="bi bi-rocket-takeoff me-2"></i>Experience Level</th>
-            <th scope="col"><i class="bi bi-star me-2"></i>Rating</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let skill of skills; let i = index">
-            <td>{{ i + 1 }}</td>
-            <td>{{ skill.Skill }}</td>
-            <td>{{ skill.Years }}</td>
-            <td>{{ skill.Level }}</td>
-            <td>
-              @if (skill.Level === 'Extensive Experience and Knowledge') {
-                <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
-              } @else if (skill.Level === 'Solid Experience and Knowledge') {
-                <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half text-warning"></i><i class="bi bi-star text-warning"></i>
-              } @else if (skill.Level === 'Basic Experience and Knowledge') {
-                <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i>
-              }
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  
-  <!-- Scroll Indicator -->
-  <div class="scroll-indicator position-relative start-50 translate-middle-x" style="margin-top: 4rem;">
-    <a href="#contact" class="text-black text-decoration-none">
-      <div class="d-flex flex-column align-items-center animate-bounce">
-        <span class="small mb-2">Get in touch with him</span>
-        <i class="bi bi-chevron-down fs-4"></i>
-      </div>
-    </a>
-  </div>
-</section>
-
-<section id="contact" class="py-5 position-relative">  
-  <div class="container">
-    <h2 class="text-center mb-5">Contact Arvid Waldner</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card border-0 shadow-sm" data-aos="fade-up" data-aos-delay="100">
-          <div class="card-body">
-            <form>
-              <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Your Name">
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Your Email">
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-          </div>
+    <h2 class="text-center mb-5">Skills Summary</h2>
+    
+    <!-- First row: Tech Stacks (full width) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="table-responsive" data-aos="fade-up" data-aos-delay="100">
+          <table class="table table-hover table-bordered align-middle">
+            <caption class="text-center fw-bold fs-5 bg-light border border-bottom-0 py-3" style="caption-side: top;">Tech Stacks</caption>
+            <thead style="background-color: #1976d2; color: white;">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col"><i class="bi bi-code-slash me-2"></i>Skill</th>
+                <th scope="col"><i class="bi bi-calendar-check me-2"></i>Years</th>
+                <th scope="col"><i class="bi bi-rocket-takeoff me-2"></i>Experience Level</th>
+                <th scope="col"><i class="bi bi-star me-2"></i>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let skill of skills; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ skill.Skill }}</td>
+                <td>{{ skill.Years }}</td>
+                <td>{{ skill.Level }}</td>
+                <td>
+                  @if (skill.Level === 'Extensive Experience and Knowledge') {
+                    <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+                  } @else if (skill.Level === 'Solid Experience and Knowledge') {
+                    <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half text-warning"></i><i class="bi bi-star text-warning"></i>
+                  } @else if (skill.Level === 'Basic Experience and Knowledge') {
+                    <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i>
+                  }
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
-  </div>
+
+    <!-- Second row: Application Knowledge (full width) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="table-responsive" data-aos="fade-up" data-aos-delay="100">
+          <table class="table table-hover table-bordered align-middle">
+            <caption class="text-center fw-bold fs-5 bg-light border border-bottom-0 py-3" style="caption-side: top;">Application Knowledge</caption>
+            <thead style="background-color: #1976d2; color: white;">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col"><i class="bi bi-laptop me-2"></i>Skill</th>
+                <th scope="col"><i class="bi bi-calendar-check me-2"></i>Years</th>
+                <th scope="col"><i class="bi bi-rocket-takeoff me-2"></i>Experience Level</th>
+                <th scope="col"><i class="bi bi-star me-2"></i>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let skill of applicationKnowledgeSkills; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ skill.Skill }}</td>
+                <td>{{ skill.Years }}</td>
+                <td>{{ skill.Level }}</td>
+                <td>
+                  @if (skill.Level === 'Extensive Experience and Knowledge') {
+                    <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+                  } @else if (skill.Level === 'Solid Experience and Knowledge') {
+                    <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half text-warning"></i><i class="bi bi-star text-warning"></i>
+                  } @else if (skill.Level === 'Basic Experience and Knowledge') {
+                    <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i>
+                  }
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: IT Disciplines + Industry Knowledge (2 columns) -->
+    <div class="row mb-4">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="table-responsive" data-aos="fade-up" data-aos-delay="100">
+          <table class="table table-hover table-bordered align-middle">
+            <caption class="text-center fw-bold fs-5 bg-light border border-bottom-0 py-3" style="caption-side: top;">IT Disciplines</caption>
+            <thead style="background-color: #1976d2; color: white;">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col"><i class="bi bi-laptop me-2"></i>Skill</th>
+                <th scope="col"><i class="bi bi-calendar-check me-2"></i>Years</th>
+                <th scope="col"><i class="bi bi-rocket-takeoff me-2"></i>Experience Level</th>
+                <th scope="col"><i class="bi bi-star me-2"></i>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let skill of itDisciplinesSkills; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ skill.Skill }}</td>
+                <td>{{ skill.Years }}</td>
+                <td>{{ skill.Level }}</td>
+                <td>
+                  @if (skill.Level === 'Extensive Experience and Knowledge') {
+                    <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+                  } @else if (skill.Level === 'Solid Experience and Knowledge') {
+                    <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half text-warning"></i><i class="bi bi-star text-warning"></i>
+                  } @else if (skill.Level === 'Basic Experience and Knowledge') {
+                    <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i>
+                  }
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="table-responsive" data-aos="fade-up" data-aos-delay="100">
+          <table class="table table-hover table-bordered align-middle">
+            <caption class="text-center fw-bold fs-5 bg-light border border-bottom-0 py-3" style="caption-side: top;">Industry Knowledge</caption>
+            <thead style="background-color: #1976d2; color: white;">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col"><i class="bi bi-building me-2"></i>Skill</th>
+                <th scope="col"><i class="bi bi-calendar-check me-2"></i>Years</th>
+                <th scope="col"><i class="bi bi-rocket-takeoff me-2"></i>Experience Level</th>
+                <th scope="col"><i class="bi bi-star me-2"></i>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let skill of industryKnowledgeSkills; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ skill.Skill }}</td>
+                <td>{{ skill.Years }}</td>
+                <td>{{ skill.Level }}</td>
+                <td>
+                  @if (skill.Level === 'Extensive Experience and Knowledge') {
+                    <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+                  } @else if (skill.Level === 'Solid Experience and Knowledge') {
+                    <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half text-warning"></i><i class="bi bi-star text-warning"></i>
+                  } @else if (skill.Level === 'Basic Experience and Knowledge') {
+                    <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i>
+                  }
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fourth row: Language Skills (full width) -->
+    <div class="row">
+      <div class="col-12">
+        <div class="table-responsive" data-aos="fade-up" data-aos-delay="100">
+          <table class="table table-hover table-bordered align-middle">
+            <caption class="text-center fw-bold fs-5 bg-light border border-bottom-0 py-3" style="caption-side: top;">Language Skills</caption>
+            <thead style="background-color: #1976d2; color: white;">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col"><i class="bi bi-globe me-2"></i>Skill</th>
+                <th scope="col"><i class="bi bi-type me-2"></i>Writing</th>
+                <th scope="col"><i class="bi bi-chat-dots me-2"></i>Speaking</th>            
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let skill of languageSkills; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ skill.Skill }}</td>
+                <td>{{ skill.Writing }}</td>
+                <td>{{ skill.Speaking }}</td>            
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
 </section>
-
-
 <router-outlet />

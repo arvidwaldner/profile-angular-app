@@ -1,0 +1,11 @@
+{
+  "ITDisciplines": [
+    { "Skill": "Software engineering", "Years": 9, "Level": "Extensive Experience and Knowledge" },
+    { "Skill": "API development", "Years": 7, "Level": "Extensive Experience and Knowledge" },
+    { "Skill": "Testing", "Years": 4, "Level": "Solid Experience and Knowledge" },
+    { "Skill": "SCRUM", "Years": 4, "Level": "Solid Experience and Knowledge" },
+    { "Skill": "Requirement management", "Years": 1, "Level": "Basic Experience and Knowledge" },
+    { "Skill": "RUP", "Years": 1, "Level": "Basic Experience and Knowledge" },
+    { "Skill": "Support", "Years": 0.5, "Level": "Basic Experience and Knowledge" }
+  ]
+}
