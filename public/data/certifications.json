@@ -1,0 +1,18 @@
+{
+    "Certifications": [
+        {
+            "Name": "Microsoft Certified: Azure Fundamentals (AZ-900)",
+            "IssuingOrganization": "Microsoft",
+            "IssueDate": "2023-06-13",
+            "Icon": "bi-cloud",
+            "Description": "This certification validates foundational knowledge of cloud services and how those services are provided with Microsoft Azure."
+        },
+        {
+            "Name": "Docker Certified Associate Training Course",
+            "IssuingOrganization": "SimpliLearn",
+            "IssueDate": "2025-10-21",
+            "Icon": "bi-box-seam",
+            "Description": "This training provides a comprehensive understanding of Docker containerization technology, including installation, configuration, and management of Docker environments."
+        }
+    ]
+}

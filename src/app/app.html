@@ -14,6 +14,9 @@
           <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#skills">Skills summary</a>
         </li>        
       </ul>
@@ -33,6 +36,10 @@
           <a href="#about" class="btn btn-outline-primary btn-lg">
             <i class="bi bi-info me-2"></i>
             About him
+          </a>
+          <a href="#education" class="btn btn-outline-primary btn-lg">
+            <i class="bi bi-mortarboard me-2"></i>
+            His Education
           </a>          
           <a href="#skills" class="btn btn-outline-primary btn-lg">
             <i class="bi bi-code-square me-2"></i>
@@ -73,123 +80,67 @@
     <br/>
     <h2 class="text-center mb-5">Areas of expertise and characteristics</h2>
     <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay="100">
-          <div class="card-body text-center">
-            <i class="bi bi-star text-primary fs-1 mb-3"></i>
-            <h5 class="card-title">Experience</h5>
-            <p class="card-text text-muted">With over 9 years of experience in .NET software development, Arvid brings knowledge and expertise to every project. His hands on experience comes from both .NET Framework, .NET Core and newer versions of .NET.</p>
+      @for (item of skillAreasData; track item.Title; let i = $index) {
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" [attr.data-aos-delay]="(i % 3) * 100 + 100">
+            <div class="card-body text-center">
+              <i class="bi {{item.Icon}} text-primary fs-1 mb-3"></i>
+              <h5 class="card-title">{{item.Title}}</h5>
+              <p class="card-text text-muted">{{item.Description}}</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay="200">
-          <div class="card-body text-center">
-            <i class="bi bi-gear text-primary fs-1 mb-3"></i>
-            <h5 class="card-title">Rest API Passion</h5>
-            <p class="card-text text-muted">Arvid is passionate about REST APIS and building scalable backend microservices. He has hands on experience of designing and implementing RESTful services using .NET technologies.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay="300">
-          <div class="card-body text-center">
-            <i class="bi bi-flask text-primary fs-1 mb-3"></i>
-            <h5 class="card-title">Quality Assurance Mindset</h5>
-            <p class="card-text text-muted">Arvid has solid experience of automated unit testing and integration testing through different frameworks such as MSTest, Xunit and Moq. Even experience of automated UI tests with Playwright has been gained.</p>
-          </div>
-        </div>
-      </div>
+      }
     </div>
-    <br/>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay="100">
-          <div class="card-body text-center">
-            <i class="bi bi-graph-up-arrow text-primary fs-1 mb-3"></i>
-            <h5 class="card-title">Humble Attitude</h5>
-            <p class="card-text text-muted">Arvid has been appreciated for his humble attitude and growth mindset. He's open to feedback and always eager to learn and improve.</p>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator position-relative start-50 translate-middle-x" style="margin-top: 4rem;">
+    <a href="#education" class="text-black text-decoration-none">
+      <div class="d-flex flex-column align-items-center animate-bounce">
+        <span class="small mb-2">His education and certifications</span>
+        <i class="bi bi-chevron-down fs-4"></i>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section id="education" class="py-5 position-relative">
+  <div class="container">
+    <h2 class="text-center mb-5">Education and Certifications</h2>
+    
+    <!-- Education Cards -->
+    <div class="row g-4 justify-content-center">
+      @for (edu of educationData; track edu.Degree) {
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body text-center">
+              <i class="bi {{edu.Icon}} text-primary fs-1 mb-3"></i>
+              <h5 class="card-title">{{edu.Degree}}</h5>
+              <p class="text-muted small mb-2">{{edu.Institution}} | {{edu.Year}}</p>
+              <p class="card-text text-muted">{{edu.Description}}</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay="200">
-          <div class="card-body text-center">
-            <i class="bi bi-clipboard-check text-primary fs-1 mb-3"></i>
-            <h5 class="card-title">Code Reviews</h5>
-            <p class="card-text text-muted">Arvid has hands on experience of working with code review processes and providing constructive feedback to improve code quality.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay="200">
-          <div class="card-body text-center">
-            <i class="bi bi-cloud text-primary fs-1 mb-3"></i>
-            <h5 class="card-title">Cloud</h5>
-            <p class="card-text text-muted">Arvid has hands on experience with Microsoft Azure cloud services, including deployment and management. He's also certifed with Azure Fundamentals AZ-900</p>
-          </div>
-        </div>
-      </div>
+      }
     </div>
+    
     <br/>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay="100">
-          <div class="card-body text-center">
-            <i class="bi bi-robot text-primary fs-1 mb-3"></i>
-            <h5 class="card-title">AI Prompting Skills</h5>
-            <p class="card-text text-muted">In just a year, Arvid has improved his AI prompting skills significantly, leveraging advanced techniques to enhance productivity and creativity. He's an experienced user of Github Copilot in previous projects improving not just productivity, but also learning, reflecting and critical thinking of suggested code.</p>
+    
+    <!-- Certification Cards -->
+    <div class="row g-4 justify-content-center">
+      @for (cert of certificationData; track cert.Name) {
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body text-center">
+              <i class="bi {{cert.Icon || 'bi-award'}} text-primary fs-1 mb-3"></i>
+              <h5 class="card-title">{{cert.Name}}</h5>
+              <p class="text-muted small mb-2">{{cert.IssuingOrganization}} | {{cert.IssueDate}}</p>
+              <p class="card-text text-muted">{{cert.Description}}</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay="200">
-          <div class="card-body text-center">
-            <i class="bi bi-mortarboard text-primary fs-1 mb-3"></i>
-            <h5 class="card-title">Continous Learning</h5>
-            <p class="card-text text-muted">Arvid is goal oriented and more than eager to learn and grow continuously in his professional career. That is why he has an ongoing certification process in Docker Certified Association to master containerization and orchestration technologies. He's also working on private angular and react projects that he's showcasing in his Github portfolio.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay="200">
-          <div class="card-body text-center">
-            <i class="bi bi-building text-primary fs-1 mb-3"></i>
-            <h5 class="card-title">Diverse Business Industry Experience</h5>
-            <p class="card-text text-muted">Arvid has been exposed to a variety of business industries in both the private sector and the public sector. He's been in Transportation, logistics, government agencies and manufacturing industries which has gained valuable insights and adapted his skills to meet diverse business needs.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br/>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay="100">
-          <div class="card-body text-center">
-            <i class="bi bi-rocket-takeoff text-primary fs-1 mb-3"></i>
-            <h5 class="card-title">CI/CD</h5>
-            <p class="card-text text-muted">Arvid has hands on experince of CI/CD in a Team Foundation Server/Azure Devops context. Setting up pipelines and automating deployments to improve software delivery processes.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay="200">
-          <div class="card-body text-center">
-            <i class="bi bi-database text-primary fs-1 mb-3"></i>
-            <h5 class="card-title">Databases</h5>
-            <p class="card-text text-muted">Arvid has multiple years of experience working with Microsoft SQL Server and T-SQL hosted on Prem as well as in Azure. He's also skilled working with ORM-frameworks such as Entity Framework, Entity Framework Core and Nhibernate</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay="200">
-          <div class="card-body text-center">
-            <i class="bi bi-bootstrap text-primary fs-1 mb-3"></i>
-            <h5 class="card-title">Bootstrap CSS</h5>
-            <p class="card-text text-muted">Arvid is the first one to admitt that he's not an artist and not gifted with a talent for design. That's why he uses Bootstrap CSS to create responsive and visually appealing web interfaces with ease.</p>
-          </div>
-        </div>
-      </div>
+      }
     </div>
   </div>
 
@@ -227,7 +178,7 @@
               @for (skill of techStackSkills; track skill.Skill; let i = $index) {
                 @if (i === 0 || techStackSkills[i - 1].Domain !== skill.Domain) {
                   <tr>
-                    <td colspan="5" class="fw-bold text-white" style="background-color: #2196f3;">
+                    <td colspan="5" class="fw-bold text-dark border" style="background-color: #e3f2fd;">
                       <i class="bi {{skill.DomainIcon}} me-2"></i>
                       {{ skill.Domain }}
                     </td>
@@ -274,7 +225,7 @@
               @for (skill of applicationKnowledgeSkills; track skill.Skill; let i = $index) {
                 @if (i === 0 || applicationKnowledgeSkills[i - 1].Domain !== skill.Domain) {
                   <tr>
-                    <td colspan="5" class="fw-bold text-white" style="background-color: #2196f3;">
+                    <td colspan="5" class="fw-bold text-dark border" style="background-color: #e3f2fd;">
                       <i class="bi {{skill.DomainIcon}} me-2"></i>
                       {{ skill.Domain }}
                     </td>
@@ -321,7 +272,7 @@
               @for (skill of itDisciplinesSkills; track skill.Skill; let i = $index) {
                 @if (i === 0 || itDisciplinesSkills[i - 1].Domain !== skill.Domain) {
                   <tr>
-                    <td colspan="5" class="fw-bold text-white" style="background-color: #2196f3;">
+                    <td colspan="5" class="fw-bold text-dark border" style="background-color: #e3f2fd;">
                       <i class="bi {{skill.DomainIcon}} me-2"></i>
                       {{ skill.Domain }}
                     </td>
@@ -365,7 +316,7 @@
               @for (skill of industryKnowledgeSkills; track skill.Skill; let i = $index) {
                 @if (i === 0 || industryKnowledgeSkills[i - 1].Domain !== skill.Domain) {
                   <tr>
-                    <td colspan="5" class="fw-bold text-white" style="background-color: #2196f3;">
+                    <td colspan="5" class="fw-bold text-dark border" style="background-color: #e3f2fd;">
                       <i class="bi {{skill.DomainIcon}} me-2"></i>
                       {{ skill.Domain }}
                     </td>
@@ -411,7 +362,7 @@
               @for (skill of languageSkills; track skill.Skill; let i = $index) {
                 @if (i === 0 || languageSkills[i - 1].Domain !== skill.Domain) {
                   <tr>
-                    <td colspan="4" class="fw-bold text-white" style="background-color: #2196f3;">
+                    <td colspan="4" class="fw-bold text-dark border" style="background-color: #e3f2fd;">
                       <i class="bi {{skill.DomainIcon}} me-2"></i>
                       {{ skill.Domain }}
                     </td>
@@ -432,4 +383,35 @@
   </div> 
   
 </section>
+
+<!-- Footer Section -->
+<footer class="bg-white border-top py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-3 mb-md-0">
+        <h5 class="text-dark">Arvid Waldner</h5>
+        <p class="text-muted mb-2">Software Engineer .NET</p>
+        <p class="text-muted small">Building modern web applications with passion and precision.</p>
+      </div>      
+      <div class="col-md-3">
+        <h6 class="text-dark">Connect</h6>
+        <div class="d-flex gap-3">
+          <a href="https://github.com/arvidwaldner" target="_blank" class="text-dark fs-4">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/arvid-waldner" target="_blank" class="text-dark fs-4">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr class="border-secondary my-3">
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="text-muted small mb-0">&copy; 2025 Arvid Waldner. Built with Angular, Bootstrap CSS and Github Copilot Claude Sonnet 4.5</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 <router-outlet />

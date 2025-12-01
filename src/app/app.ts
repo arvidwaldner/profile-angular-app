@@ -44,6 +44,40 @@ interface IndustryKnowledge {
   DomainIcon?: string;
 }
 
+interface Education {
+  Degree: string;
+  Institution: string;
+  Year: string;
+  Description: string;
+  Icon: string;
+}
+
+interface Certification {
+  Name: string;
+  IssuingOrganization: string;
+  IssueDate: string;
+  Icon?: string;
+  Description?: string;
+}
+
+interface EducationData {
+  Education: Education[];
+}
+
+interface CertificationData {
+  Certifications: Certification[];
+}
+
+interface SkillAreaCharacteristic {
+  Title: string;
+  Icon: string;
+  Description: string;
+}
+
+interface SkillAreasData {
+  SkillAreasAndCharacteristics: SkillAreaCharacteristic[];
+}
+
 interface IndustryKnowledgeData {
   IndustryKnowledge: IndustryKnowledge[];
 }
@@ -80,6 +114,9 @@ export class App implements OnInit {
   applicationKnowledgeSkills: ApplicationKonwledge[] = [];
   itDisciplinesSkills: ITDisciplines[] = [];
   industryKnowledgeSkills: IndustryKnowledge[] = [];
+  educationData: Education[] = [];
+  certificationData: Certification[] = [];
+  skillAreasData: SkillAreaCharacteristic[] = [];
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -125,6 +162,27 @@ export class App implements OnInit {
         this.industryKnowledgeSkills = this.sortSkills(data.IndustryKnowledge);
       },
       error: (err) => console.error('Error loading industry knowledge:', err)
+    });
+
+    this.http.get<EducationData>('data/education.json').subscribe({
+      next: (data) => {
+        this.educationData = data.Education;
+      },
+      error: (err) => console.error('Error loading education data:', err)
+    });
+
+    this.http.get<CertificationData>('data/certifications.json').subscribe({    
+      next: (data) => {
+        this.certificationData = data.Certifications;
+      },
+      error: (err) => console.error('Error loading certification data:', err)
+    });
+
+    this.http.get<SkillAreasData>('data/skill-areas-and-characteristics.json').subscribe({
+      next: (data) => {
+        this.skillAreasData = data.SkillAreasAndCharacteristics;
+      },
+      error: (err) => console.error('Error loading skill areas data:', err)
     });
   }
 
