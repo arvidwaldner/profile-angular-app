@@ -1,6 +1,6 @@
 {
   "LanguageSkills": [
-    { "Skill": "Swedish", "Writing": "Native", "Speaking": "Native" },
-    { "Skill": "English", "Writing": "Professional proficiency", "Speaking": "Professional proficiency" }
+    { "Skill": "Swedish", "Writing": "Native", "Speaking": "Native", "Domain": "Native Language", "DomainIcon": "bi-house-heart" },
+    { "Skill": "English", "Writing": "Professional proficiency", "Speaking": "Professional proficiency", "Domain": "Other Languages", "DomainIcon": "bi-translate" }
   ]
 }

@@ -224,21 +224,31 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let skill of skills; let i = index">
-                <td>{{ i + 1 }}</td>
-                <td>{{ skill.Skill }}</td>
-                <td>{{ skill.Years }}</td>
-                <td>{{ skill.Level }}</td>
-                <td>
-                  @if (skill.Level === 'Extensive Experience and Knowledge') {
-                    <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
-                  } @else if (skill.Level === 'Solid Experience and Knowledge') {
-                    <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half text-warning"></i><i class="bi bi-star text-warning"></i>
-                  } @else if (skill.Level === 'Basic Experience and Knowledge') {
-                    <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i>
-                  }
-                </td>
-              </tr>
+              @for (skill of techStackSkills; track skill.Skill; let i = $index) {
+                @if (i === 0 || techStackSkills[i - 1].Domain !== skill.Domain) {
+                  <tr>
+                    <td colspan="5" class="fw-bold text-white" style="background-color: #2196f3;">
+                      <i class="bi {{skill.DomainIcon}} me-2"></i>
+                      {{ skill.Domain }}
+                    </td>
+                  </tr>
+                }
+                <tr>
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ skill.Skill }}</td>
+                  <td>{{ skill.Years }}</td>
+                  <td>{{ skill.Level }}</td>
+                  <td>
+                    @if (skill.Level === 'Extensive Experience and Knowledge') {
+                      <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+                    } @else if (skill.Level === 'Solid Experience and Knowledge') {
+                      <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half text-warning"></i><i class="bi bi-star text-warning"></i>
+                    } @else if (skill.Level === 'Basic Experience and Knowledge') {
+                      <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i>
+                    }
+                  </td>
+                </tr>
+              }
             </tbody>
           </table>
         </div>
@@ -261,7 +271,16 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let skill of applicationKnowledgeSkills; let i = index">
+              @for (skill of applicationKnowledgeSkills; track skill.Skill; let i = $index) {
+                @if (i === 0 || applicationKnowledgeSkills[i - 1].Domain !== skill.Domain) {
+                  <tr>
+                    <td colspan="5" class="fw-bold text-white" style="background-color: #2196f3;">
+                      <i class="bi {{skill.DomainIcon}} me-2"></i>
+                      {{ skill.Domain }}
+                    </td>
+                  </tr>
+                }
+                <tr>
                 <td>{{ i + 1 }}</td>
                 <td>{{ skill.Skill }}</td>
                 <td>{{ skill.Years }}</td>
@@ -276,6 +295,7 @@
                   }
                 </td>
               </tr>
+              }
             </tbody>
           </table>
         </div>
@@ -298,7 +318,16 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let skill of itDisciplinesSkills; let i = index">
+              @for (skill of itDisciplinesSkills; track skill.Skill; let i = $index) {
+                @if (i === 0 || itDisciplinesSkills[i - 1].Domain !== skill.Domain) {
+                  <tr>
+                    <td colspan="5" class="fw-bold text-white" style="background-color: #2196f3;">
+                      <i class="bi {{skill.DomainIcon}} me-2"></i>
+                      {{ skill.Domain }}
+                    </td>
+                  </tr>
+                }
+                <tr>
                 <td>{{ i + 1 }}</td>
                 <td>{{ skill.Skill }}</td>
                 <td>{{ skill.Years }}</td>
@@ -313,6 +342,7 @@
                   }
                 </td>
               </tr>
+              }
             </tbody>
           </table>
         </div>
@@ -332,7 +362,16 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let skill of industryKnowledgeSkills; let i = index">
+              @for (skill of industryKnowledgeSkills; track skill.Skill; let i = $index) {
+                @if (i === 0 || industryKnowledgeSkills[i - 1].Domain !== skill.Domain) {
+                  <tr>
+                    <td colspan="5" class="fw-bold text-white" style="background-color: #2196f3;">
+                      <i class="bi {{skill.DomainIcon}} me-2"></i>
+                      {{ skill.Domain }}
+                    </td>
+                  </tr>
+                }
+                <tr>
                 <td>{{ i + 1 }}</td>
                 <td>{{ skill.Skill }}</td>
                 <td>{{ skill.Years }}</td>
@@ -347,6 +386,7 @@
                   }
                 </td>
               </tr>
+              }
             </tbody>
           </table>
         </div>
@@ -368,12 +408,22 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let skill of languageSkills; let i = index">
+              @for (skill of languageSkills; track skill.Skill; let i = $index) {
+                @if (i === 0 || languageSkills[i - 1].Domain !== skill.Domain) {
+                  <tr>
+                    <td colspan="4" class="fw-bold text-white" style="background-color: #2196f3;">
+                      <i class="bi {{skill.DomainIcon}} me-2"></i>
+                      {{ skill.Domain }}
+                    </td>
+                  </tr>
+                }
+                <tr>
                 <td>{{ i + 1 }}</td>
                 <td>{{ skill.Skill }}</td>
                 <td>{{ skill.Writing }}</td>
                 <td>{{ skill.Speaking }}</td>            
               </tr>
+              }
             </tbody>
           </table>
         </div>

@@ -8,30 +8,40 @@ interface LanguageSkill {
   Skill: string;
   Writing: string;
   Speaking: string;
+  Domain?: string;
+  DomainIcon?: string;
 }
 
 interface TechSkill {
   Skill: string;
   Years: number;
   Level: string;
+  Domain?: string;
+  DomainIcon?: string;
 }
 
 interface ApplicationKonwledge {
   Skill: string;
   Years: number;
   Level: string;
+  Domain?: string;
+  DomainIcon?: string;
 }
 
 interface ITDisciplines {
   Skill: string;
   Years: number;
   Level: string;
+  Domain?: string;
+  DomainIcon?: string;
 }
 
 interface IndustryKnowledge {
   Skill: string;
   Years: number;
   Level: string;
+  Domain?: string;
+  DomainIcon?: string;
 }
 
 interface IndustryKnowledgeData {
@@ -65,7 +75,7 @@ export class App implements OnInit {
   private platformId = inject(PLATFORM_ID);
   private http = inject(HttpClient);
   
-  skills: TechSkill[] = [];
+  techStackSkills: TechSkill[] = [];
   languageSkills: LanguageSkill[] = [];
   applicationKnowledgeSkills: ApplicationKonwledge[] = [];
   itDisciplinesSkills: ITDisciplines[] = [];
@@ -84,7 +94,7 @@ export class App implements OnInit {
     
     this.http.get<TechStacksData>('data/tech-stacks.json').subscribe({
       next: (data) => {
-        this.skills = this.sortSkills(data.TechnicalSkills);
+        this.techStackSkills = this.sortSkills(data.TechnicalSkills);
       },
       error: (err) => console.error('Error loading tech stacks:', err)
     });
@@ -126,8 +136,17 @@ export class App implements OnInit {
     };
 
     return skills.sort((a, b) => {
+      // First, group by domain if it exists
+      if (a.Domain && b.Domain) {
+        const domainCompare = a.Domain.localeCompare(b.Domain);
+        if (domainCompare !== 0) return domainCompare;
+      }
+      
+      // Then sort by level
       const levelDiff = levelOrder[b.Level] - levelOrder[a.Level];
       if (levelDiff !== 0) return levelDiff;
+      
+      // Finally sort by years
       return b.Years - a.Years;
     });
   }
