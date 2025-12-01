@@ -60,6 +60,22 @@ interface Certification {
   Description?: string;
 }
 
+interface Experience {
+  Company: string;
+  Type: string;
+  Role: string;
+  Country: string;
+  City: string;
+  From: string;
+  To: string;
+  Icon: string;
+  Description: string;
+}
+
+interface ExperiencesData {
+  Experiences: Experience[];
+}
+
 interface EducationData {
   Education: Education[];
 }
@@ -117,6 +133,7 @@ export class App implements OnInit {
   educationData: Education[] = [];
   certificationData: Certification[] = [];
   skillAreasData: SkillAreaCharacteristic[] = [];
+  experiencesData: Experience[] = [];
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -183,6 +200,21 @@ export class App implements OnInit {
         this.skillAreasData = data.SkillAreasAndCharacteristics;
       },
       error: (err) => console.error('Error loading skill areas data:', err)
+    });
+
+    this.http.get<ExperiencesData>('data/experiences.json').subscribe({
+      next: (data) => {
+        this.experiencesData = this.sortExperiences(data.Experiences);
+      },
+      error: (err) => console.error('Error loading experiences data:', err)
+    });
+  }
+
+  private sortExperiences(experiences: Experience[]): Experience[] {
+    return experiences.sort((a, b) => {
+      const dateA = new Date(a.To === 'Present' ? new Date().toISOString() : a.To);  
+      const dateB = new Date(b.To === 'Present' ? new Date().toISOString() : b.To);  
+      return dateB.getTime() - dateA.getTime();
     });
   }
 

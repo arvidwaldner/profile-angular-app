@@ -17,6 +17,9 @@
           <a class="nav-link" href="#education">Education</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#experiences">Experiences</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#skills">Skills summary</a>
         </li>        
       </ul>
@@ -32,18 +35,18 @@
         <p class="lead text-muted mb-4" data-aos="fade-right" data-aos-delay="100">
           Official Angular profile app of Arvid Waldner, a seasoned senior software engineer specializing in .NET technologies. Explore his skills, characteristics, and professional journey.
         </p>
-        <div class="d-flex gap-3 mb-4" data-aos="fade-right" data-aos-delay="200">
-          <a href="#about" class="btn btn-outline-primary btn-lg">
-            <i class="bi bi-info me-2"></i>
-            About him
+        <div class="d-flex flex-wrap gap-3 mb-4" data-aos="fade-right" data-aos-delay="200">
+          <a href="#about" class="btn btn-outline-primary btn-lg text-nowrap">
+            <i class="bi bi-info-circle me-2"></i>About him
           </a>
-          <a href="#education" class="btn btn-outline-primary btn-lg">
-            <i class="bi bi-mortarboard me-2"></i>
-            His Education
-          </a>          
-          <a href="#skills" class="btn btn-outline-primary btn-lg">
-            <i class="bi bi-code-square me-2"></i>
-            His skills summary
+          <a href="#education" class="btn btn-outline-primary btn-lg text-nowrap">
+            <i class="bi bi-mortarboard me-2"></i>His Education
+          </a>
+          <a href="#experiences" class="btn btn-outline-primary btn-lg text-nowrap">
+            <i class="bi bi-briefcase me-2"></i>His Experiences
+          </a>             
+          <a href="#skills" class="btn btn-outline-primary btn-lg text-nowrap">
+            <i class="bi bi-code-square me-2"></i>His Skills summary
           </a>          
         </div>
         <div class="social-links" data-aos="fade-right" data-aos-delay="300">
@@ -145,9 +148,40 @@
 
   <!-- Scroll Indicator -->
   <div class="scroll-indicator position-relative start-50 translate-middle-x mt-5">
+    <a href="#experiences" class="text-black text-decoration-none">
+      <div class="d-flex flex-column align-items-center animate-bounce">
+        <span class="small mb-2">His Work Experiences</span>
+        <i class="bi bi-chevron-down fs-4"></i>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section id="experiences" class="py-5 position-relative">
+  <div class ="container">
+    <h2 class="text-center mb-5 mt-4">Professional Experiences</h2>
+    <div class="timeline">
+      @for (exp of experiencesData; track exp.Company; let i = $index) {
+        <div class="timeline-item" data-aos="fade-up" [attr.data-aos-delay]="(i % 3) * 100 + 100">
+          <div class="timeline-icon text-dark" style="background-color: #e3f2fd;">
+            <i class="bi {{exp.Icon}}"></i>
+          </div>
+          <div class="timeline-content">
+            <h5 class="mb-1">{{exp.Role}}</h5>
+            <p class="text-muted mb-1">{{exp.Company}} - {{exp.City}}, {{exp.Country}}</p>
+            <p class="text-muted small mb-2">{{exp.From}} to {{exp.To}}</p>
+            <p class="mb-0">{{exp.Description}}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+  
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator position-relative start-50 translate-middle-x mt-5">
     <a href="#skills" class="text-black text-decoration-none">
       <div class="d-flex flex-column align-items-center animate-bounce">
-        <span class="small mb-2">His skills summarized</span>
+        <span class="small mb-2">His Skills Summary</span>
         <i class="bi bi-chevron-down fs-4"></i>
       </div>
     </a>

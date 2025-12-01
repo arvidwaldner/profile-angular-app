@@ -103,3 +103,43 @@
 .card.shadow-lg {
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
+
+/* Timeline styles */
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  width: 2px;
+  background-color: #dee2e6;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 100px;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid white;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+.timeline-icon i {
+  font-size: 2rem;
+}

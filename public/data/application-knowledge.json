@@ -10,8 +10,8 @@
     { "Skill": "Microsoft Azure/Microsoft Azurestack", "Years": 2, "Level": "Solid Experience and Knowledge", "Domain": "Cloud & Infrastructure", "DomainIcon": "bi-cloud" },
     { "Skill": "Github Copilot", "Years": 1, "Level": "Solid Experience and Knowledge", "Domain": "AI & Productivity", "DomainIcon": "bi-robot" },
     { "Skill": "Github", "Years": 1, "Level": "Solid Experience and Knowledge", "Domain": "DevOps & Version Control", "DomainIcon": "bi-git" },
-    { "Skill": "Insomnia", "Years": 1, "Level": "Basic Experience and Knowledge", "Domain": "API Testing Tools", "DomainIcon": "bi-send" },
-    { "Skill": "Postman", "Years": 1, "Level": "Basic Experience and Knowledge", "Domain": "API Testing Tools", "DomainIcon": "bi-send" },    
+    { "Skill": "Insomnia", "Years": 1, "Level": "Solid Experience and Knowledge", "Domain": "API Testing Tools", "DomainIcon": "bi-send" },
+    { "Skill": "Postman", "Years": 1, "Level": "Solid Experience and Knowledge", "Domain": "API Testing Tools", "DomainIcon": "bi-send" },    
     { "Skill": "GitBash", "Years": 0.5, "Level": "Basic Experience and Knowledge", "Domain": "DevOps & Version Control", "DomainIcon": "bi-git" },
     { "Skill": "Oracle SQL Developer", "Years": 0.5, "Level": "Basic Experience and Knowledge", "Domain": "Database Tools", "DomainIcon": "bi-database-gear" }
   ]
