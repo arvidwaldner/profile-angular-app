@@ -18,7 +18,8 @@
                 "NHibernate",
                 "REST",
                 ".NET Core",
-                ".NET Framework"
+                ".NET Framework",
+                "IFS"
             ],
             "Languages": [
                 "C#",
@@ -28,8 +29,7 @@
                 "YAML"
             ],
             "Databases": [
-                "Microsoft SQL Server",
-                "IFS"
+                "Microsoft SQL Server"
             ],
             "Frontend": [
                 "HTML",                
