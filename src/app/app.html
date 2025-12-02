@@ -165,7 +165,99 @@
             <h5 class="mb-1">{{exp.Role}}</h5>
             <p class="text-muted mb-1">{{exp.Company}} - {{exp.City}}, {{exp.Country}}</p>
             <p class="text-muted small mb-2">{{exp.From}} to {{exp.To}}</p>
-            <p class="mb-0">{{exp.Description}}</p>
+            <p class="mb-0">{{exp.Description}}</p>            
+          </div>
+          <div class="timeline-footer mt-3">
+            @if (exp.Technologies.length > 0) {
+              <div class="mb-2">
+                <strong class="small text-muted d-block mb-1">Technologies & Frameworks:</strong>
+                <div class="d-flex flex-wrap gap-1">
+                  @for (tech of exp.Technologies; track tech) {
+                    <span class="badge bg-light text-dark border">{{tech}}</span>
+                  }
+                </div>
+              </div>
+            }
+            @if (exp.Languages.length > 0) {
+              <div class="mb-2">
+                <strong class="small text-muted d-block mb-1">Languages:</strong>
+                <div class="d-flex flex-wrap gap-1">
+                  @for (lang of exp.Languages; track lang) {
+                    <span class="badge bg-light text-dark border">{{lang}}</span>
+                  }
+                </div>
+              </div>
+            }
+            @if (exp.Databases.length > 0) {
+              <div class="mb-2">
+                <strong class="small text-muted d-block mb-1">Databases:</strong>
+                <div class="d-flex flex-wrap gap-1">
+                  @for (db of exp.Databases; track db) {
+                    <span class="badge bg-light text-dark border">{{db}}</span>
+                  }
+                </div>
+              </div>
+            }
+            @if (exp.Frontend.length > 0) {
+              <div class="mb-2">
+                <strong class="small text-muted d-block mb-1">Frontend:</strong>
+                <div class="d-flex flex-wrap gap-1">
+                  @for (fe of exp.Frontend; track fe) {
+                    <span class="badge bg-light text-dark border">{{fe}}</span>
+                  }
+                </div>
+              </div>
+            }
+            @if (exp.Tools.length > 0) {
+              <div class="mb-2">
+                <strong class="small text-muted d-block mb-1">Tools:</strong>
+                <div class="d-flex flex-wrap gap-1">
+                  @for (tool of exp.Tools; track tool) {
+                    <span class="badge bg-light text-dark border">{{tool}}</span>
+                  }
+                </div>
+              </div>
+            }
+            @if (exp.Practices.length > 0) {
+              <div class="mb-2">
+                <strong class="small text-muted d-block mb-1">Practices:</strong>
+                <div class="d-flex flex-wrap gap-1">
+                  @for (practice of exp.Practices; track practice) {
+                    <span class="badge bg-light text-dark border">{{practice}}</span>
+                  }
+                </div>
+              </div>
+            }
+            @if (exp.Messaging.length > 0) {
+              <div class="mb-2">
+                <strong class="small text-muted d-block mb-1">Messaging:</strong>
+                <div class="d-flex flex-wrap gap-1">
+                  @for (msg of exp.Messaging; track msg) {
+                    <span class="badge bg-light text-dark border">{{msg}}</span>
+                  }
+                </div>
+              </div>
+            }
+            @if (exp.Security.length > 0) {
+              <div class="mb-2">
+                <strong class="small text-muted d-block mb-1">Security:</strong>
+                <div class="d-flex flex-wrap gap-1">
+                  @for (sec of exp.Security; track sec) {
+                    <span class="badge bg-light text-dark border">{{sec}}</span>
+                  }
+                </div>
+              </div>
+            }
+            @if (exp.DataFormats.length > 0) {
+              <div class="mb-2">
+                <strong class="small text-muted d-block mb-1">Data Formats:</strong>
+                <div class="d-flex flex-wrap gap-1">
+                  @for (format of exp.DataFormats; track format) {
+                    <span class="badge bg-light text-dark border">{{format}}</span>
+                  }
+                </div>
+              </div>
+            }
           </div>
         </div>
       }
