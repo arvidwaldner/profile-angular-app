@@ -158,7 +158,8 @@
             "Practices": [
                 "Unit Testing",
                 "Integration Testing",
-                "SCRUM"
+                "SCRUM",
+                "CI/CD"
             ],
             "Messaging": [],
             "Security": []
@@ -198,8 +199,7 @@
             "Practices": [
                 "Unit Testing",
                 "Integration Testing",
-                "SCRUM",
-                "CI/CD"
+                "SCRUM"
             ],
             "Messaging": [],
             "Security": []
