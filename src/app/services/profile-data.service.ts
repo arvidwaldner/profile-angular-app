@@ -1,5 +1,6 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable, inject, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { DOCUMENT } from '@angular/common';
 import { Observable, map } from 'rxjs';
 import {
   TechSkill,
@@ -27,6 +28,7 @@ import {
 })
 export class ProfileDataService {
   private http = inject(HttpClient);
+  private baseUrl: string;
 
   private readonly levelOrder: Record<string, number> = {
     'Extensive Experience and Knowledge': 3,
@@ -34,56 +36,61 @@ export class ProfileDataService {
     'Basic Experience and Knowledge': 1
   };
 
+  constructor(@Inject(DOCUMENT) private document: Document) {
+    const base = this.document.querySelector('base');
+    this.baseUrl = base?.getAttribute('href') || '/';
+  }
+
   getTechStacks(): Observable<TechSkill[]> {
-    return this.http.get<TechStacksData>('data/tech-stacks.json').pipe(
+    return this.http.get<TechStacksData>(`${this.baseUrl}data/tech-stacks.json`).pipe(
       map(data => this.sortSkills(data.TechnicalSkills))
     );
   }
 
   getApplicationKnowledge(): Observable<ApplicationKonwledge[]> {
-    return this.http.get<ApplicationKnowledgeData>('data/application-knowledge.json').pipe(
+    return this.http.get<ApplicationKnowledgeData>(`${this.baseUrl}data/application-knowledge.json`).pipe(
       map(data => this.sortSkills(data.ApplicationKnowledge))
     );
   }
 
   getITDisciplines(): Observable<ITDisciplines[]> {
-    return this.http.get<ITDisciplinesData>('data/it-disciplines.json').pipe(
+    return this.http.get<ITDisciplinesData>(`${this.baseUrl}data/it-disciplines.json`).pipe(
       map(data => this.sortSkills(data.ITDisciplines))
     );
   }
 
   getLanguageSkills(): Observable<LanguageSkill[]> {
-    return this.http.get<LanguageSkillsData>('data/language-skills.json').pipe(
+    return this.http.get<LanguageSkillsData>(`${this.baseUrl}data/language-skills.json`).pipe(
       map(data => data.LanguageSkills)
     );
   }
 
   getIndustryKnowledge(): Observable<IndustryKnowledge[]> {
-    return this.http.get<IndustryKnowledgeData>('data/industry-knowledge.json').pipe(
+    return this.http.get<IndustryKnowledgeData>(`${this.baseUrl}data/industry-knowledge.json`).pipe(
       map(data => this.sortSkills(data.IndustryKnowledge))
     );
   }
 
   getEducation(): Observable<Education[]> {
-    return this.http.get<EducationData>('data/education.json').pipe(
+    return this.http.get<EducationData>(`${this.baseUrl}data/education.json`).pipe(
       map(data => data.Education)
     );
   }
 
   getCertifications(): Observable<Certification[]> {
-    return this.http.get<CertificationData>('data/certifications.json').pipe(
+    return this.http.get<CertificationData>(`${this.baseUrl}data/certifications.json`).pipe(
       map(data => data.Certifications)
     );
   }
 
   getSkillAreas(): Observable<SkillAreaCharacteristic[]> {
-    return this.http.get<SkillAreasData>('data/skill-areas-and-characteristics.json').pipe(
+    return this.http.get<SkillAreasData>(`${this.baseUrl}data/skill-areas-and-characteristics.json`).pipe(
       map(data => data.SkillAreasAndCharacteristics)
     );
   }
 
   getExperiences(): Observable<Experience[]> {
-    return this.http.get<ExperiencesData>('data/experiences.json').pipe(
+    return this.http.get<ExperiencesData>(`${this.baseUrl}data/experiences.json`).pipe(
       map(data => this.sortExperiences(data.Experiences))
     );
   }
