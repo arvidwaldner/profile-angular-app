@@ -30,10 +30,13 @@
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ],
-            "outputMode": "static"
+            "server": "src/main.server.ts",
+            "prerender": false,
+            "ssr": {"entry": "src/server.ts"}
           },
           "configurations": {
             "production": {
+              "outputMode": "static",
               "budgets": [
                 {
                   "type": "initial",
