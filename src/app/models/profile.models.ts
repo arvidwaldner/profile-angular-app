@@ -22,7 +22,7 @@ export interface ApplicationKonwledge {
   DomainIcon?: string;
 }
 
-export interface ITDisciplines {
+export interface TechDomain {
   Skill: string;
   Years: number;
   Level: string;
@@ -30,7 +30,7 @@ export interface ITDisciplines {
   DomainIcon?: string;
 }
 
-export interface IndustryKnowledge {
+export interface IndustryExperience {
   Skill: string;
   Years: number;
   Level: string;
@@ -98,8 +98,8 @@ export interface SkillAreasData {
   SkillAreasAndCharacteristics: SkillAreaCharacteristic[];
 }
 
-export interface IndustryKnowledgeData {
-  IndustryKnowledge: IndustryKnowledge[];
+export interface IndustryExperienceData {
+  IndustryExperiences: IndustryExperience[];
 }
 
 export interface LanguageSkillsData {
@@ -114,6 +114,6 @@ export interface ApplicationKnowledgeData {
   ApplicationKnowledge: ApplicationKonwledge[];
 }
 
-export interface ITDisciplinesData {
-  ITDisciplines: ITDisciplines[];
+export interface TechDomainsData {
+  TechDomains: TechDomain[];
 }

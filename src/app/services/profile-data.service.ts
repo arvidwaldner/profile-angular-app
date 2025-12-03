@@ -6,8 +6,7 @@ import {
   TechSkill,
   LanguageSkill,
   ApplicationKonwledge,
-  ITDisciplines,
-  IndustryKnowledge,
+  TechDomain,  
   Education,
   Certification,
   SkillAreaCharacteristic,
@@ -15,12 +14,13 @@ import {
   TechStacksData,
   LanguageSkillsData,
   ApplicationKnowledgeData,
-  ITDisciplinesData,
-  IndustryKnowledgeData,
+  TechDomainsData,
+  IndustryExperienceData,
   EducationData,
   CertificationData,
   SkillAreasData,
-  ExperiencesData
+  ExperiencesData,  
+  IndustryExperience  
 } from '../models/profile.models';
 
 @Injectable({
@@ -53,9 +53,9 @@ export class ProfileDataService {
     );
   }
 
-  getITDisciplines(): Observable<ITDisciplines[]> {
-    return this.http.get<ITDisciplinesData>(`${this.baseUrl}data/it-disciplines.json`).pipe(
-      map(data => this.sortSkills(data.ITDisciplines))
+  getTechDomains(): Observable<TechDomain[]> {
+    return this.http.get<TechDomainsData>(`${this.baseUrl}data/tech-domains.json`).pipe(
+      map(data => this.sortSkills(data.TechDomains))
     );
   }
 
@@ -65,9 +65,9 @@ export class ProfileDataService {
     );
   }
 
-  getIndustryKnowledge(): Observable<IndustryKnowledge[]> {
-    return this.http.get<IndustryKnowledgeData>(`${this.baseUrl}data/industry-knowledge.json`).pipe(
-      map(data => this.sortSkills(data.IndustryKnowledge))
+  getIndustryExperiences(): Observable<IndustryExperience[]> {
+    return this.http.get<IndustryExperienceData>(`${this.baseUrl}data/industry-experiences.json`).pipe(
+      map(data => this.sortSkills(data.IndustryExperiences))
     );
   }
 

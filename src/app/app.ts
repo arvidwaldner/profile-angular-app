@@ -7,12 +7,12 @@ import {
   TechSkill,
   LanguageSkill,
   ApplicationKonwledge,
-  ITDisciplines,
-  IndustryKnowledge,
+  TechDomain,
+  IndustryExperience,
   Education,
   Certification,
   SkillAreaCharacteristic,
-  Experience
+  Experience  
 } from './models/profile.models';
 
 @Component({
@@ -29,8 +29,8 @@ export class App implements OnInit {
   techStackSkills = signal<TechSkill[]>([]);
   languageSkills = signal<LanguageSkill[]>([]);
   applicationKnowledgeSkills = signal<ApplicationKonwledge[]>([]);
-  itDisciplinesSkills = signal<ITDisciplines[]>([]);
-  industryKnowledgeSkills = signal<IndustryKnowledge[]>([]);
+  techDomainSkills = signal<TechDomain[]>([]);
+  industryExperienceSkills = signal<IndustryExperience[]>([]);
   educationData = signal<Education[]>([]);
   certificationData = signal<Certification[]>([]);
   skillAreasData = signal<SkillAreaCharacteristic[]>([]);
@@ -57,9 +57,9 @@ export class App implements OnInit {
       error: (err) => console.error('Error loading application knowledge:', err)
     });
 
-    this.profileDataService.getITDisciplines().subscribe({
-      next: (data) => this.itDisciplinesSkills.set(data),
-      error: (err) => console.error('Error loading IT disciplines:', err)
+    this.profileDataService.getTechDomains().subscribe({
+      next: (data) => this.techDomainSkills.set(data),
+      error: (err) => console.error('Error loading tech domains:', err)
     });
 
     this.profileDataService.getLanguageSkills().subscribe({
@@ -67,9 +67,9 @@ export class App implements OnInit {
       error: (err) => console.error('Error loading language skills:', err)
     });
 
-    this.profileDataService.getIndustryKnowledge().subscribe({
-      next: (data) => this.industryKnowledgeSkills.set(data),
-      error: (err) => console.error('Error loading industry knowledge:', err)
+    this.profileDataService.getIndustryExperiences().subscribe({
+      next: (data) => this.industryExperienceSkills.set(data),
+      error: (err) => console.error('Error loading industry experience:', err)
     });
 
     this.profileDataService.getEducation().subscribe({

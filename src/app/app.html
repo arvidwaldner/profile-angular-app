@@ -374,7 +374,7 @@
       <div class="col-lg-6 mb-4 mb-lg-0">
         <div class="table-responsive" data-aos="fade-up" data-aos-delay="100">
           <table class="table table-hover table-bordered align-middle">
-            <caption class="text-center fw-bold fs-5 bg-light border border-bottom-0 py-3" style="caption-side: top;">IT Disciplines</caption>
+            <caption class="text-center fw-bold fs-5 bg-light border border-bottom-0 py-3" style="caption-side: top;">Tech Domains</caption>
             <thead style="background-color: #1976d2; color: white;">
               <tr>
                 <th scope="col">#</th>
@@ -385,8 +385,8 @@
               </tr>
             </thead>
             <tbody>
-              @for (skill of itDisciplinesSkills(); track skill.Skill; let i = $index) {
-                @if (i === 0 || itDisciplinesSkills()[i - 1].Domain !== skill.Domain) {
+              @for (skill of techDomainSkills(); track skill.Skill; let i = $index) {
+                @if (i === 0 || techDomainSkills()[i - 1].Domain !== skill.Domain) {
                   <tr>
                     <td colspan="5" class="fw-bold text-dark border" style="background-color: #e3f2fd;">
                       <i class="bi {{skill.DomainIcon}} me-2"></i>
@@ -418,7 +418,7 @@
       <div class="col-lg-6">
         <div class="table-responsive" data-aos="fade-up" data-aos-delay="100">
           <table class="table table-hover table-bordered align-middle">
-            <caption class="text-center fw-bold fs-5 bg-light border border-bottom-0 py-3" style="caption-side: top;">Industry Knowledge</caption>
+            <caption class="text-center fw-bold fs-5 bg-light border border-bottom-0 py-3" style="caption-side: top;">Industry Experience</caption>
             <thead style="background-color: #1976d2; color: white;">
               <tr>
                 <th scope="col">#</th>
@@ -429,8 +429,8 @@
               </tr>
             </thead>
             <tbody>
-              @for (skill of industryKnowledgeSkills(); track skill.Skill; let i = $index) {
-                @if (i === 0 || industryKnowledgeSkills()[i - 1].Domain !== skill.Domain) {
+              @for (skill of industryExperienceSkills(); track skill.Skill; let i = $index) {
+                @if (i === 0 || industryExperienceSkills()[i - 1].Domain !== skill.Domain) {
                   <tr>
                     <td colspan="5" class="fw-bold text-dark border" style="background-color: #e3f2fd;">
                       <i class="bi {{skill.DomainIcon}} me-2"></i>
