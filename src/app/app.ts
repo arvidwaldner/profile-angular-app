@@ -26,15 +26,15 @@ export class App implements OnInit {
   private platformId = inject(PLATFORM_ID);
   private profileDataService = inject(ProfileDataService);
   
-  techStackSkills: TechSkill[] = [];
-  languageSkills: LanguageSkill[] = [];
-  applicationKnowledgeSkills: ApplicationKonwledge[] = [];
-  itDisciplinesSkills: ITDisciplines[] = [];
-  industryKnowledgeSkills: IndustryKnowledge[] = [];
-  educationData: Education[] = [];
-  certificationData: Certification[] = [];
-  skillAreasData: SkillAreaCharacteristic[] = [];
-  experiencesData: Experience[] = [];
+  techStackSkills = signal<TechSkill[]>([]);
+  languageSkills = signal<LanguageSkill[]>([]);
+  applicationKnowledgeSkills = signal<ApplicationKonwledge[]>([]);
+  itDisciplinesSkills = signal<ITDisciplines[]>([]);
+  industryKnowledgeSkills = signal<IndustryKnowledge[]>([]);
+  educationData = signal<Education[]>([]);
+  certificationData = signal<Certification[]>([]);
+  skillAreasData = signal<SkillAreaCharacteristic[]>([]);
+  experiencesData = signal<Experience[]>([]);
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -48,47 +48,47 @@ export class App implements OnInit {
     }
     
     this.profileDataService.getTechStacks().subscribe({
-      next: (data) => this.techStackSkills = data,
+      next: (data) => this.techStackSkills.set(data),
       error: (err) => console.error('Error loading tech stacks:', err)
     });
 
     this.profileDataService.getApplicationKnowledge().subscribe({
-      next: (data) => this.applicationKnowledgeSkills = data,
+      next: (data) => this.applicationKnowledgeSkills.set(data),
       error: (err) => console.error('Error loading application knowledge:', err)
     });
 
     this.profileDataService.getITDisciplines().subscribe({
-      next: (data) => this.itDisciplinesSkills = data,
+      next: (data) => this.itDisciplinesSkills.set(data),
       error: (err) => console.error('Error loading IT disciplines:', err)
     });
 
     this.profileDataService.getLanguageSkills().subscribe({
-      next: (data) => this.languageSkills = data,
+      next: (data) => this.languageSkills.set(data),
       error: (err) => console.error('Error loading language skills:', err)
     });
 
     this.profileDataService.getIndustryKnowledge().subscribe({
-      next: (data) => this.industryKnowledgeSkills = data,
+      next: (data) => this.industryKnowledgeSkills.set(data),
       error: (err) => console.error('Error loading industry knowledge:', err)
     });
 
     this.profileDataService.getEducation().subscribe({
-      next: (data) => this.educationData = data,
+      next: (data) => this.educationData.set(data),
       error: (err) => console.error('Error loading education data:', err)
     });
 
     this.profileDataService.getCertifications().subscribe({    
-      next: (data) => this.certificationData = data,
+      next: (data) => this.certificationData.set(data),
       error: (err) => console.error('Error loading certification data:', err)
     });
 
     this.profileDataService.getSkillAreas().subscribe({
-      next: (data) => this.skillAreasData = data,
+      next: (data) => this.skillAreasData.set(data),
       error: (err) => console.error('Error loading skill areas data:', err)
     });
 
     this.profileDataService.getExperiences().subscribe({
-      next: (data) => this.experiencesData = data,
+      next: (data) => this.experiencesData.set(data),
       error: (err) => console.error('Error loading experiences data:', err)
     });
   }

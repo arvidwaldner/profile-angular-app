@@ -80,7 +80,7 @@
   <div class="container">
     <h2 class="text-center mb-5 mt-4">Areas of expertise and characteristics</h2>
     <div class="row g-4">
-      @for (item of skillAreasData; track item.Title; let i = $index) {
+      @for (item of skillAreasData(); track item.Title; let i = $index) {
         <div class="col-md-4">
           <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" [attr.data-aos-delay]="(i % 3) * 100 + 100">
             <div class="card-body text-center">
@@ -110,7 +110,7 @@
     
     <!-- Education Cards -->
     <div class="row g-4 justify-content-center">
-      @for (edu of educationData; track edu.Degree) {
+      @for (edu of educationData(); track edu.Degree) {
         <div class="col-md-6">
           <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay="100">
             <div class="card-body text-center">
@@ -127,7 +127,7 @@
     <br/>    
     
     <div class="row g-4 justify-content-center">
-      @for (cert of certificationData; track cert.Name) {
+      @for (cert of certificationData(); track cert.Name) {
         <div class="col-md-6">
           <div class="card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay="100">
             <div class="card-body text-center">
@@ -156,7 +156,7 @@
   <div class ="container">
     <h2 class="text-center mb-5 mt-4">Professional Experiences</h2>
     <div class="timeline">
-      @for (exp of experiencesData; track exp.Company; let i = $index) {
+      @for (exp of experiencesData(); track exp.Company; let i = $index) {
         <div class="timeline-item" data-aos="fade-up" [attr.data-aos-delay]="(i % 3) * 100 + 100">
           <div class="timeline-icon text-dark" style="background-color: #e3f2fd;">
             <i class="bi {{exp.Icon}}"></i>
@@ -293,8 +293,8 @@
               </tr>
             </thead>
             <tbody>
-              @for (skill of techStackSkills; track skill.Skill; let i = $index) {
-                @if (i === 0 || techStackSkills[i - 1].Domain !== skill.Domain) {
+              @for (skill of techStackSkills(); track skill.Skill; let i = $index) {
+                @if (i === 0 || techStackSkills()[i - 1].Domain !== skill.Domain) {
                   <tr>
                     <td colspan="5" class="fw-bold text-dark border" style="background-color: #e3f2fd;">
                       <i class="bi {{skill.DomainIcon}} me-2"></i>
@@ -339,8 +339,8 @@
               </tr>
             </thead>
             <tbody>
-              @for (skill of applicationKnowledgeSkills; track skill.Skill; let i = $index) {
-                @if (i === 0 || applicationKnowledgeSkills[i - 1].Domain !== skill.Domain) {
+              @for (skill of applicationKnowledgeSkills(); track skill.Skill; let i = $index) {
+                @if (i === 0 || applicationKnowledgeSkills()[i - 1].Domain !== skill.Domain) {
                   <tr>
                     <td colspan="5" class="fw-bold text-dark border" style="background-color: #e3f2fd;">
                       <i class="bi {{skill.DomainIcon}} me-2"></i>
@@ -385,8 +385,8 @@
               </tr>
             </thead>
             <tbody>
-              @for (skill of itDisciplinesSkills; track skill.Skill; let i = $index) {
-                @if (i === 0 || itDisciplinesSkills[i - 1].Domain !== skill.Domain) {
+              @for (skill of itDisciplinesSkills(); track skill.Skill; let i = $index) {
+                @if (i === 0 || itDisciplinesSkills()[i - 1].Domain !== skill.Domain) {
                   <tr>
                     <td colspan="5" class="fw-bold text-dark border" style="background-color: #e3f2fd;">
                       <i class="bi {{skill.DomainIcon}} me-2"></i>
@@ -429,8 +429,8 @@
               </tr>
             </thead>
             <tbody>
-              @for (skill of industryKnowledgeSkills; track skill.Skill; let i = $index) {
-                @if (i === 0 || industryKnowledgeSkills[i - 1].Domain !== skill.Domain) {
+              @for (skill of industryKnowledgeSkills(); track skill.Skill; let i = $index) {
+                @if (i === 0 || industryKnowledgeSkills()[i - 1].Domain !== skill.Domain) {
                   <tr>
                     <td colspan="5" class="fw-bold text-dark border" style="background-color: #e3f2fd;">
                       <i class="bi {{skill.DomainIcon}} me-2"></i>
@@ -474,8 +474,8 @@
               </tr>
             </thead>
             <tbody>
-              @for (skill of languageSkills; track skill.Skill; let i = $index) {
-                @if (i === 0 || languageSkills[i - 1].Domain !== skill.Domain) {
+              @for (skill of languageSkills(); track skill.Skill; let i = $index) {
+                @if (i === 0 || languageSkills()[i - 1].Domain !== skill.Domain) {
                   <tr>
                     <td colspan="4" class="fw-bold text-dark border" style="background-color: #e3f2fd;">
                       <i class="bi {{skill.DomainIcon}} me-2"></i>
