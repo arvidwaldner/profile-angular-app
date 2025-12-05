@@ -73,7 +73,7 @@ export class ProfileDataService {
 
   getEducation(): Observable<Education[]> {
     return this.http.get<EducationsData>(`${this.baseUrl}data/educations.json`).pipe(
-      map(data => data.Education || [])
+      map(data => data.Educations || [])
     );
   }
 

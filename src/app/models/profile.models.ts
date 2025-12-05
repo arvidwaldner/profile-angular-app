@@ -87,7 +87,7 @@ export interface WorkExperiencesData {
 }
 
 export interface EducationsData {
-  Education: Education[];
+  Educations: Education[];
 }
 
 export interface CertificationData {
