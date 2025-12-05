@@ -157,6 +157,7 @@
             ],
             "Practices": [
                 "Unit Testing",
+                "Manual Testing", 
                 "Integration Testing",
                 "SCRUM",
                 "CI/CD"
@@ -197,8 +198,7 @@
             "DataFormats": [],
             "Tools": [],
             "Practices": [
-                "Unit Testing",
-                "Integration Testing",
+                "Manual Testing",                
                 "SCRUM"
             ],
             "Messaging": [],
