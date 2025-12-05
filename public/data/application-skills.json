@@ -1,5 +1,5 @@
 {
-  "ApplicationKnowledge": [
+  "ApplicationSkills": [
     { "Skill": "Microsoft Office", "Years": 15, "Level": "Extensive Experience and Knowledge", "Domain": "Productivity Software", "DomainIcon": "bi-file-earmark-text" },
     { "Skill": "Visual Studio", "Years": 9, "Level": "Extensive Experience and Knowledge", "Domain": "Development Tools", "DomainIcon": "bi-code-square" },
     { "Skill": "Microsoft SQL Server", "Years": 6, "Level": "Extensive Experience and Knowledge", "Domain": "Database Tools", "DomainIcon": "bi-database-gear" },

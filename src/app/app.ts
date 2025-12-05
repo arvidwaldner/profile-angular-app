@@ -12,7 +12,7 @@ import {
   Education,
   Certification,
   SkillAreaCharacteristic,
-  Experience  
+  WorkExperience  
 } from './models/profile.models';
 
 @Component({
@@ -31,10 +31,10 @@ export class App implements OnInit {
   applicationKnowledgeSkills = signal<ApplicationKonwledge[]>([]);
   techDomainSkills = signal<TechDomain[]>([]);
   industryExperienceSkills = signal<IndustryExperience[]>([]);
-  educationData = signal<Education[]>([]);
+  educationsData = signal<Education[]>([]);
   certificationData = signal<Certification[]>([]);
   skillAreasData = signal<SkillAreaCharacteristic[]>([]);
-  experiencesData = signal<Experience[]>([]);
+  experiencesData = signal<WorkExperience[]>([]);
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -73,7 +73,7 @@ export class App implements OnInit {
     });
 
     this.profileDataService.getEducation().subscribe({
-      next: (data) => this.educationData.set(data),
+      next: (data) => this.educationsData.set(data),
       error: (err) => console.error('Error loading education data:', err)
     });
 

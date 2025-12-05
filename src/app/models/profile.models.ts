@@ -54,7 +54,7 @@ export interface Certification {
   Description?: string;
 }
 
-export interface Experience {
+export interface WorkExperience {
   Company: string;
   Type: string;
   Role: string;
@@ -82,11 +82,11 @@ export interface SkillAreaCharacteristic {
 }
 
 // Response interfaces for JSON files
-export interface ExperiencesData {
-  Experiences: Experience[];
+export interface WorkExperiencesData {
+  WorkExperiences: WorkExperience[];
 }
 
-export interface EducationData {
+export interface EducationsData {
   Education: Education[];
 }
 
@@ -110,8 +110,8 @@ export interface TechStacksData {
   TechnicalSkills: TechSkill[];
 }
 
-export interface ApplicationKnowledgeData {
-  ApplicationKnowledge: ApplicationKonwledge[];
+export interface ApplicationSkillsData {
+  ApplicationSkills: ApplicationKonwledge[];
 }
 
 export interface TechDomainsData {

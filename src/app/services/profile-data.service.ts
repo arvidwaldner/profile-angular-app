@@ -10,16 +10,16 @@ import {
   Education,
   Certification,
   SkillAreaCharacteristic,
-  Experience,
+  WorkExperience,
   TechStacksData,
   LanguageSkillsData,
-  ApplicationKnowledgeData,
+  ApplicationSkillsData,
   TechDomainsData,
   IndustryExperienceData,
-  EducationData,
+  EducationsData,
   CertificationData,
   SkillAreasData,
-  ExperiencesData,  
+  WorkExperiencesData,  
   IndustryExperience  
 } from '../models/profile.models';
 
@@ -48,8 +48,8 @@ export class ProfileDataService {
   }
 
   getApplicationKnowledge(): Observable<ApplicationKonwledge[]> {
-    return this.http.get<ApplicationKnowledgeData>(`${this.baseUrl}data/application-knowledge.json`).pipe(
-      map(data => this.sortSkills(data.ApplicationKnowledge))
+    return this.http.get<ApplicationSkillsData>(`${this.baseUrl}data/application-skills.json`).pipe(
+      map(data => this.sortSkills(data.ApplicationSkills))
     );
   }
 
@@ -72,8 +72,8 @@ export class ProfileDataService {
   }
 
   getEducation(): Observable<Education[]> {
-    return this.http.get<EducationData>(`${this.baseUrl}data/education.json`).pipe(
-      map(data => data.Education)
+    return this.http.get<EducationsData>(`${this.baseUrl}data/educations.json`).pipe(
+      map(data => data.Education || [])
     );
   }
 
@@ -89,13 +89,13 @@ export class ProfileDataService {
     );
   }
 
-  getExperiences(): Observable<Experience[]> {
-    return this.http.get<ExperiencesData>(`${this.baseUrl}data/experiences.json`).pipe(
-      map(data => this.sortExperiences(data.Experiences))
+  getExperiences(): Observable<WorkExperience[]> {
+    return this.http.get<WorkExperiencesData>(`${this.baseUrl}data/work-experiences.json`).pipe(
+      map(data => this.sortExperiences(data.WorkExperiences || []))
     );
   }
 
-  private sortExperiences(experiences: Experience[]): Experience[] {
+  private sortExperiences(experiences: WorkExperience[]): WorkExperience[] {
     return experiences.sort((a, b) => {
       const dateA = new Date(a.To === 'Present' ? new Date().toISOString() : a.To);
       const dateB = new Date(b.To === 'Present' ? new Date().toISOString() : b.To);
