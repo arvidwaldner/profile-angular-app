@@ -13,6 +13,9 @@ import {
   WorkExperience,
   IndustryExperience  
 } from '../models/profile.models';
+import { env } from 'process';
+import { environment } from '../../environments/environment';
+import e from 'express';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +23,7 @@ import {
 export class ProfileDataService {
   private http = inject(HttpClient);
   private baseUrl: string;
+  private apiUrl = environment.useLocalApi ? environment.apiUrl : ''; // Use local API URL from environment
 
   private readonly levelOrder: Record<string, number> = {
     'Extensive Experience and Knowledge': 3,
@@ -33,46 +37,82 @@ export class ProfileDataService {
   }
 
   getTechStacks(): Observable<TechSkill[]> {
+    if(this.apiUrl !== '') {
+      return this.http.get<TechSkill[]>(`${this.apiUrl}/tech-stacks`);      
+    }
+
     return this.http.get<TechSkill[]>(`${this.baseUrl}data/tech-stacks.json`).pipe(
       map(data => this.sortSkills(data))
     );
   }
 
   getApplicationKnowledge(): Observable<ApplicationKonwledge[]> {
+    if(this.apiUrl !== '') {
+      return this.http.get<ApplicationKonwledge[]>(`${this.apiUrl}/application-knowledge`);      
+    }
+    
     return this.http.get<ApplicationKonwledge[]>(`${this.baseUrl}data/application-skills.json`).pipe(
       map(data => this.sortSkills(data))
     );
   }
 
-  getTechDomains(): Observable<TechDomain[]> {
+  getTechDomains(): Observable<TechDomain[]> {    
+    if(this.apiUrl !== '') {
+      return this.http.get<TechDomain[]>(`${this.apiUrl}/tech-domains`);      
+    }
+
     return this.http.get<TechDomain[]>(`${this.baseUrl}data/tech-domains.json`).pipe(
       map(data => this.sortSkills(data))
     );
   }
 
   getLanguageSkills(): Observable<LanguageSkill[]> {
+    if(this.apiUrl !== '') {
+      return this.http.get<LanguageSkill[]>(`${this.apiUrl}/language-skills`);      
+    }
+
     return this.http.get<LanguageSkill[]>(`${this.baseUrl}data/language-skills.json`);
   }
 
   getIndustryExperiences(): Observable<IndustryExperience[]> {
+    if(this.apiUrl !== '') {
+      return this.http.get<IndustryExperience[]>(`${this.apiUrl}/industry-experiences`);      
+    }
+
     return this.http.get<IndustryExperience[]>(`${this.baseUrl}data/industry-experiences.json`).pipe(
       map(data => this.sortSkills(data))
     );
   }
 
   getEducation(): Observable<Education[]> {
+    if(this.apiUrl !== '') {
+      return this.http.get<Education[]>(`${this.apiUrl}/educations`);      
+    }
+
     return this.http.get<Education[]>(`${this.baseUrl}data/educations.json`);
   }
 
   getCertifications(): Observable<Certification[]> {
+    if(this.apiUrl !== '') {
+      return this.http.get<Certification[]>(`${this.apiUrl}/certifications`);      
+    }
+
     return this.http.get<Certification[]>(`${this.baseUrl}data/certifications.json`);
   }
 
   getSkillAreas(): Observable<SkillAreaCharacteristic[]> {
+    if(this.apiUrl !== '') {
+      return this.http.get<SkillAreaCharacteristic[]>(`${this.apiUrl}/skill-areas-and-characteristics`);      
+    }
+
     return this.http.get<SkillAreaCharacteristic[]>(`${this.baseUrl}data/skill-areas-and-characteristics.json`);
   }
 
   getExperiences(): Observable<WorkExperience[]> {
+    if(this.apiUrl !== '') {
+      return this.http.get<WorkExperience[]>(`${this.apiUrl}/work-experiences`);      
+    }
+
     return this.http.get<WorkExperience[]>(`${this.baseUrl}data/work-experiences.json`).pipe(
       map(data => this.sortExperiences(data))
     );
