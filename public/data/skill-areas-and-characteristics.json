@@ -1,64 +1,74 @@
-{
-  "SkillAreasAndCharacteristics": [
-    {
-      "Title": "Experience",
-      "Icon": "bi-star",
-      "Description": "With over 9 years of experience in .NET software development, he brings knowledge and expertise to every project. His hands on experience comes from both .NET Framework, .NET Core and newer versions of .NET."
-    },
-    {
-      "Title": "Rest API Passion",
-      "Icon": "bi-gear",
-      "Description": "Passionate about REST APIS and building scalable backend microservices. He has hands on experience of designing and implementing RESTful services using .NET technologies."
-    },
-    {
-      "Title": "Quality Assurance Mindset",
-      "Icon": "bi-flask",
-      "Description": "Solid experience of automated unit testing and integration testing through different frameworks such as MSTest, Xunit and Moq. Even experience of automated UI tests with Playwright has been gained."
-    },
-    {
-      "Title": "Humble Attitude",
-      "Icon": "bi-graph-up-arrow",
-      "Description": "Appreciated for his humble attitude and growth mindset. He's open to feedback and always eager to learn and improve."
-    },
-    {
-      "Title": "Code Reviews",
-      "Icon": "bi-clipboard-check",
-      "Description": "Hands on experience of working with code review processes and providing constructive feedback to improve code quality."
-    },
-    {
-      "Title": "Cloud",
-      "Icon": "bi-cloud",
-      "Description": "Hands on experience with Microsoft Azure cloud services, including deployment and management. He's also certifed with Azure Fundamentals AZ-900"
-    },
-    {
-      "Title": "AI Prompting Skills",
-      "Icon": "bi-robot",
-      "Description": "Improved his AI prompting skills significantly in just a year, leveraging advanced techniques to enhance productivity and creativity. He's an experienced user of Github Copilot in previous projects improving not just productivity, but also learning, reflecting and critical thinking of suggested code."
-    },
-    {
-      "Title": "Continous Learning",
-      "Icon": "bi-mortarboard",
-      "Description": "He's Goal oriented and more than eager to learn and grow continuously in his professional career. That is why he has an ongoing certification process in Docker Certified Association to master containerization and orchestration technologies. He's also working on private angular and react projects that he's showcasing in his Github portfolio."
-    },
-    {
-      "Title": "Diverse Business Industry Experience",
-      "Icon": "bi-building",
-      "Description": "He's been exposed to a variety of business industries in both the private sector and the public sector. He's been in Transportation, logistics, government agencies and manufacturing industries which has gained valuable insights and adapted his skills to meet diverse business needs."
-    },
-    {
-      "Title": "CI/CD",
-      "Icon": "bi-rocket-takeoff",
-      "Description": "Hands on experience of CI/CD in a Team Foundation Server/Azure Devops context. Setting up pipelines and automating deployments to improve software delivery processes."
-    },
-    {
-      "Title": "Databases",
-      "Icon": "bi-database",
-      "Description": "He has experience of working with Microsoft SQL Server and T-SQL hosted on Prem as well as in Azure. He's also skilled working with ORM-frameworks such as Entity Framework, Entity Framework Core and Nhibernate"
-    },
-    {
-      "Title": "Bootstrap CSS",
-      "Icon": "bi-bootstrap",
-      "Description": "First person to admit that he's not an artist and not gifted with a talent for design. That's why he uses Bootstrap CSS to create responsive and visually appealing web interfaces with ease."
-    }
-  ]
-}
+[
+  {
+    "SalesPitchOrder": 1,
+    "Title": "Experience",
+    "Icon": "bi-star",
+    "Description": "With over 9 years of experience in .NET software development, he brings knowledge and expertise to every project. His hands on experience comes from both .NET Framework, .NET Core and newer versions of .NET."
+  },
+  {
+    "SalesPitchOrder": 2,
+    "Title": "Rest API Passion",
+    "Icon": "bi-gear",
+    "Description": "Passionate about REST APIS and building scalable backend microservices. He has hands on experience of designing and implementing RESTful services using .NET technologies."
+  },
+  {
+    "SalesPitchOrder": 3,
+    "Title": "Quality Assurance Mindset",
+    "Icon": "bi-flask",
+    "Description": "Solid experience of automated unit testing and integration testing through different frameworks such as MSTest, Xunit and Moq. Even experience of automated UI tests with Playwright has been gained."
+  },
+  {
+    "SalesPitchOrder": 4,
+    "Title": "Humble Attitude",
+    "Icon": "bi-graph-up-arrow",
+    "Description": "Appreciated for his humble attitude and growth mindset. He's open to feedback and always eager to learn and improve."
+  },
+  {
+    "SalesPitchOrder": 5,
+    "Title": "Code Reviews",
+    "Icon": "bi-clipboard-check",
+    "Description": "Hands on experience of working with code review processes and providing constructive feedback to improve code quality."
+  },
+  {
+    "SalesPitchOrder": 6,
+    "Title": "Cloud",
+    "Icon": "bi-cloud",
+    "Description": "Hands on experience with Microsoft Azure cloud services, including deployment and management. He's also certifed with Azure Fundamentals AZ-900"
+  },
+  {
+    "SalesPitchOrder": 7,
+    "Title": "AI Prompting Skills",
+    "Icon": "bi-robot",
+    "Description": "Improved his AI prompting skills significantly in just a year, leveraging advanced techniques to enhance productivity and creativity. He's an experienced user of Github Copilot in previous projects improving not just productivity, but also learning, reflecting and critical thinking of suggested code."
+  },
+  {
+    "SalesPitchOrder": 8,
+    "Title": "Continous Learning",
+    "Icon": "bi-mortarboard",
+    "Description": "He's Goal oriented and more than eager to learn and grow continuously in his professional career. That is why he has an ongoing certification process in Docker Certified Association to master containerization and orchestration technologies. He's also working on private angular and react projects that he's showcasing in his Github portfolio."
+  },
+  {
+    "SalesPitchOrder": 9,
+    "Title": "Diverse Business Industry Experience",
+    "Icon": "bi-building",
+    "Description": "He's been exposed to a variety of business industries in both the private sector and the public sector. He's been in Transportation, logistics, government agencies and manufacturing industries which has gained valuable insights and adapted his skills to meet diverse business needs."
+  },
+  {
+    "SalesPitchOrder": 10,
+    "Title": "CI/CD",
+    "Icon": "bi-rocket-takeoff",
+    "Description": "Hands on experience of CI/CD in a Team Foundation Server/Azure Devops context. Setting up pipelines and automating deployments to improve software delivery processes."
+  },
+  {
+    "SalesPitchOrder": 11,
+    "Title": "Databases",
+    "Icon": "bi-database",
+    "Description": "He has experience of working with Microsoft SQL Server and T-SQL hosted on Prem as well as in Azure. He's also skilled working with ORM-frameworks such as Entity Framework, Entity Framework Core and Nhibernate"
+  },
+  {
+    "SalesPitchOrder": 12,
+    "Title": "Bootstrap CSS",
+    "Icon": "bi-bootstrap",
+    "Description": "First person to admit that he's not an artist and not gifted with a talent for design. That's why he uses Bootstrap CSS to create responsive and visually appealing web interfaces with ease."
+  }
+]

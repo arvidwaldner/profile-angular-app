@@ -1,208 +1,206 @@
-{
-    "WorkExperiences": [
-        {
-            "Company": "CGI Sverige AB",
-            "Type": "Employment",
-            "Role": "IT Consultant - Software Engineer .NET",
-            "Country": "Sweden",
-            "City": "Jönköping",
-            "From": "2018-02",
-            "To": "Present",
-            "Icon": "bi-person-gear",
-            "Description": "Delivering enterprise-grade software solutions as a consulting software engineer, specializing in .NET architecture, API development, and cloud integration. Contributing to technical initiatives across multiple client engagements in both the public sector and the private sector, while maintaining high standards for code quality, testing, and system reliability.",
-            "Technologies": [
-                "ASP.NET",
-                "ASP.NET MVC",
-                "Blazor",
-                "Entity Framework",
-                "NHibernate",
-                "REST",
-                ".NET Core",
-                ".NET Framework",
-                "IFS"
-            ],
-            "Languages": [
-                "C#",
-                "T-SQL",
-                "PL/SQL",
-                "PowerShell",
-                "YAML"
-            ],
-            "Databases": [
-                "Microsoft SQL Server"
-            ],
-            "Frontend": [
-                "HTML",                
-                "CSS",
-                "CSS Bootstrap",
-                "JavaScript",
-                "jQuery"
-            ],
-            "DataFormats": [
-                "JSON",
-                "XML",
-                "OpenIdConnect"
-            ],
-            "Tools": [
-                "Azure DevOps (TFS)",
-                "Git",
-                "GitHub",
-                "Jira",
-                "IIS",
-                "Insomnia",
-                "Postman",
-                "SwaggerUI",
-                "Microsoft SQL Reporting Services",
-                "Microsoft Azure/Microsoft AzureStack",
-                "Playwright",
-                "Moq",
-                "xUnit"
-            ],
-            "Practices": [
-                "Unit Testing",
-                "Integration Testing",
-                "Manual Testing",
-                "CI/CD",
-                "SCRUM"
-            ],
-            "Messaging": [
-                "IBM MQ",
-                "RabbitMQ",
-                "NServiceBus"
-            ],
-            "Security": [
-                "ADFS",
-                "OpenIdConnect",
-                "OAuth2"
-            ]
-        },
-        {
-            "Company": "Qsys Sverige AB",
-            "Type": "Employment",
-            "Role": "Software Engineer .NET",
-            "Country": "Sweden",
-            "City": "Jönköping",
-            "From": "2017-06",
-            "To": "2018-01",
-            "Icon": "bi-boxes",
-            "Description": "Engineered and maintained Qpick, a sophisticated pick-based warehouse management system serving logistics industry clients. Developed full-stack solutions using C#, T-SQL, ASP.NET MVC, JavaScript, CSS, and HTML. Responsibilities included feature development, technical documentation, requirements analysis, and comprehensive testing strategies.",
-            "Technologies": [
-                "ASP.NET MVC",
-                "WCF",
-                ".NET Framework"
-            ],
-            "Languages": [
-                "C#",
-                "JavaScript",
-                "T-SQL"
-            ],
-            "Databases": [
-                "Microsoft SQL Server"
-            ],
-            "Frontend": [
-                "HTML",
-                "CSS",
-                "CSS Bootstrap",
-                "JavaScript",
-                "jQuery"
-            ],
-            "DataFormats": [
-                "JSON",
-                "XML/XSD"
-            ],
-            "Tools": [
-                "Git",
-                "Azure DevOps (TFS)"
-            ],
-            "Practices": [
-                "Unit Testing",
-                "Integration Testing",
-                "Manual Testing",
-                "SCRUM",
-                "CI/CD"
-            ],
-            "Messaging": [],
-            "Security": []
-        },
-        {
-            "Company": "Centiro Solutions AB",
-            "Type": "Employment",
-            "Role": "Junior .NET Developer",
-            "Country": "Sweden",
-            "City": "Borås",
-            "From": "2014-10",
-            "To": "2017-05",
-            "Icon": "bi-truck",
-            "Description": "Developed high-performance system integrations connecting major e-commerce retailers with leading transportation carriers. Built robust, scalable solutions using C# and T-SQL in Microsoft SQL Server environments. Emphasized quality assurance through rigorous unit testing and integration testing practices, ensuring reliable data exchange between complex systems.",
-            "Technologies": [
-                "ASP.NET",
-                "WCF",
-                "REST",
-                ".NET Framework"
-            ],
-            "Languages": [
-                "C#",
-                "T-SQL"
-            ],
-            "Databases": [
-                "Microsoft SQL Server"
-            ],
-            "Frontend": [],
-            "DataFormats": [
-                "JSON",
-                "XML/XSD"
-            ],
-            "Tools": [
-                "Azure DevOps (TFS)"
-            ],
-            "Practices": [
-                "Unit Testing",
-                "Manual Testing", 
-                "Integration Testing",
-                "SCRUM",
-                "CI/CD"
-            ],
-            "Messaging": [],
-            "Security": []
-        },
-        {
-            "Company": "Sogeti AB",
-            "Type": "Internship",
-            "Role": "Junior .NET Developer",
-            "Country": "Sweden",
-            "City": "Örebro",
-            "From": "2014-01",
-            "To": "2014-06",
-            "Icon": "bi-mortarboard",
-            "Description": "Completed capstone software engineering project in partnership with Örebro University, developing a full-featured e-commerce platform using modern .NET technologies. Implemented comprehensive solution architecture with ASP.NET MVC5, Entity Framework 6, C#, jQuery, CSS3, and HTML5, demonstrating end-to-end development capabilities.",
-            "Technologies": [
-                "ASP.NET MVC 5",
-                "Entity Framework 6",
-                ".NET Framework"
-            ],
-            "Languages": [
-                "C#",
-                "JavaScript",
-                "T-SQL"
-            ],
-            "Databases": [
-                "Microsoft SQL Server"
-            ],
-            "Frontend": [
-                "HTML5",
-                "CSS3",
-                "CSS Bootstrap",
-                "JavaScript",
-                "jQuery"
-            ],
-            "DataFormats": [],
-            "Tools": [],
-            "Practices": [
-                "Manual Testing",                
-                "SCRUM"
-            ],
-            "Messaging": [],
-            "Security": []
-        }
-    ]
-}
+[
+    {
+        "Company": "CGI Sverige AB",
+        "Type": "Employment",
+        "Role": "IT Consultant - Software Engineer .NET",
+        "Country": "Sweden",
+        "City": "Jönköping",
+        "From": "2018-02",
+        "To": "Present",
+        "Icon": "bi-person-gear",
+        "Description": "Delivering enterprise-grade software solutions as a consulting software engineer, specializing in .NET architecture, API development, and cloud integration. Contributing to technical initiatives across multiple client engagements in both the public sector and the private sector, while maintaining high standards for code quality, testing, and system reliability.",
+        "Technologies": [
+            "ASP.NET",
+            "ASP.NET MVC",
+            "Blazor",
+            "Entity Framework",
+            "NHibernate",
+            "REST",
+            ".NET Core",
+            ".NET Framework",
+            "IFS"
+        ],
+        "Languages": [
+            "C#",
+            "T-SQL",
+            "PL/SQL",
+            "PowerShell",
+            "YAML"
+        ],
+        "Databases": [
+            "Microsoft SQL Server"
+        ],
+        "Frontend": [
+            "HTML",                
+            "CSS",
+            "CSS Bootstrap",
+            "JavaScript",
+            "jQuery"
+        ],
+        "DataFormats": [
+            "JSON",
+            "XML",
+            "OpenIdConnect"
+        ],
+        "Tools": [
+            "Azure DevOps (TFS)",
+            "Git",
+            "GitHub",
+            "Jira",
+            "IIS",
+            "Insomnia",
+            "Postman",
+            "SwaggerUI",
+            "Microsoft SQL Reporting Services",
+            "Microsoft Azure/Microsoft AzureStack",
+            "Playwright",
+            "Moq",
+            "xUnit"
+        ],
+        "Practices": [
+            "Unit Testing",
+            "Integration Testing",
+            "Manual Testing",
+            "CI/CD",
+            "SCRUM"
+        ],
+        "Messaging": [
+            "IBM MQ",
+            "RabbitMQ",
+            "NServiceBus"
+        ],
+        "Security": [
+            "ADFS",
+            "OpenIdConnect",
+            "OAuth2"
+        ]
+    },
+    {
+        "Company": "Qsys Sverige AB",
+        "Type": "Employment",
+        "Role": "Software Engineer .NET",
+        "Country": "Sweden",
+        "City": "Jönköping",
+        "From": "2017-06",
+        "To": "2018-01",
+        "Icon": "bi-boxes",
+        "Description": "Engineered and maintained Qpick, a sophisticated pick-based warehouse management system serving logistics industry clients. Developed full-stack solutions using C#, T-SQL, ASP.NET MVC, JavaScript, CSS, and HTML. Responsibilities included feature development, technical documentation, requirements analysis, and comprehensive testing strategies.",
+        "Technologies": [
+            "ASP.NET MVC",
+            "WCF",
+            ".NET Framework"
+        ],
+        "Languages": [
+            "C#",
+            "JavaScript",
+            "T-SQL"
+        ],
+        "Databases": [
+            "Microsoft SQL Server"
+        ],
+        "Frontend": [
+            "HTML",
+            "CSS",
+            "CSS Bootstrap",
+            "JavaScript",
+            "jQuery"
+        ],
+        "DataFormats": [
+            "JSON",
+            "XML/XSD"
+        ],
+        "Tools": [
+            "Git",
+            "Azure DevOps (TFS)"
+        ],
+        "Practices": [
+            "Unit Testing",
+            "Integration Testing",
+            "Manual Testing",
+            "SCRUM",
+            "CI/CD"
+        ],
+        "Messaging": [],
+        "Security": []
+    },
+    {
+        "Company": "Centiro Solutions AB",
+        "Type": "Employment",
+        "Role": "Junior .NET Developer",
+        "Country": "Sweden",
+        "City": "Borås",
+        "From": "2014-10",
+        "To": "2017-05",
+        "Icon": "bi-truck",
+        "Description": "Developed high-performance system integrations connecting major e-commerce retailers with leading transportation carriers. Built robust, scalable solutions using C# and T-SQL in Microsoft SQL Server environments. Emphasized quality assurance through rigorous unit testing and integration testing practices, ensuring reliable data exchange between complex systems.",
+        "Technologies": [
+            "ASP.NET",
+            "WCF",
+            "REST",
+            ".NET Framework"
+        ],
+        "Languages": [
+            "C#",
+            "T-SQL"
+        ],
+        "Databases": [
+            "Microsoft SQL Server"
+        ],
+        "Frontend": [],
+        "DataFormats": [
+            "JSON",
+            "XML/XSD"
+        ],
+        "Tools": [
+            "Azure DevOps (TFS)"
+        ],
+        "Practices": [
+            "Unit Testing",
+            "Manual Testing", 
+            "Integration Testing",
+            "SCRUM",
+            "CI/CD"
+        ],
+        "Messaging": [],
+        "Security": []
+    },
+    {
+        "Company": "Sogeti AB",
+        "Type": "Internship",
+        "Role": "Junior .NET Developer",
+        "Country": "Sweden",
+        "City": "Örebro",
+        "From": "2014-01",
+        "To": "2014-06",
+        "Icon": "bi-mortarboard",
+        "Description": "Completed capstone software engineering project in partnership with Örebro University, developing a full-featured e-commerce platform using modern .NET technologies. Implemented comprehensive solution architecture with ASP.NET MVC5, Entity Framework 6, C#, jQuery, CSS3, and HTML5, demonstrating end-to-end development capabilities.",
+        "Technologies": [
+            "ASP.NET MVC 5",
+            "Entity Framework 6",
+            ".NET Framework"
+        ],
+        "Languages": [
+            "C#",
+            "JavaScript",
+            "T-SQL"
+        ],
+        "Databases": [
+            "Microsoft SQL Server"
+        ],
+        "Frontend": [
+            "HTML5",
+            "CSS3",
+            "CSS Bootstrap",
+            "JavaScript",
+            "jQuery"
+        ],
+        "DataFormats": [],
+        "Tools": [],
+        "Practices": [
+            "Manual Testing",                
+            "SCRUM"
+        ],
+        "Messaging": [],
+        "Security": []
+    }
+]

@@ -11,15 +11,6 @@ import {
   Certification,
   SkillAreaCharacteristic,
   WorkExperience,
-  TechStacksData,
-  LanguageSkillsData,
-  ApplicationSkillsData,
-  TechDomainsData,
-  IndustryExperienceData,
-  EducationsData,
-  CertificationData,
-  SkillAreasData,
-  WorkExperiencesData,  
   IndustryExperience  
 } from '../models/profile.models';
 
@@ -42,56 +33,48 @@ export class ProfileDataService {
   }
 
   getTechStacks(): Observable<TechSkill[]> {
-    return this.http.get<TechStacksData>(`${this.baseUrl}data/tech-stacks.json`).pipe(
-      map(data => this.sortSkills(data.TechnicalSkills))
+    return this.http.get<TechSkill[]>(`${this.baseUrl}data/tech-stacks.json`).pipe(
+      map(data => this.sortSkills(data))
     );
   }
 
   getApplicationKnowledge(): Observable<ApplicationKonwledge[]> {
-    return this.http.get<ApplicationSkillsData>(`${this.baseUrl}data/application-skills.json`).pipe(
-      map(data => this.sortSkills(data.ApplicationSkills))
+    return this.http.get<ApplicationKonwledge[]>(`${this.baseUrl}data/application-skills.json`).pipe(
+      map(data => this.sortSkills(data))
     );
   }
 
   getTechDomains(): Observable<TechDomain[]> {
-    return this.http.get<TechDomainsData>(`${this.baseUrl}data/tech-domains.json`).pipe(
-      map(data => this.sortSkills(data.TechDomains))
+    return this.http.get<TechDomain[]>(`${this.baseUrl}data/tech-domains.json`).pipe(
+      map(data => this.sortSkills(data))
     );
   }
 
   getLanguageSkills(): Observable<LanguageSkill[]> {
-    return this.http.get<LanguageSkillsData>(`${this.baseUrl}data/language-skills.json`).pipe(
-      map(data => data.LanguageSkills)
-    );
+    return this.http.get<LanguageSkill[]>(`${this.baseUrl}data/language-skills.json`);
   }
 
   getIndustryExperiences(): Observable<IndustryExperience[]> {
-    return this.http.get<IndustryExperienceData>(`${this.baseUrl}data/industry-experiences.json`).pipe(
-      map(data => this.sortSkills(data.IndustryExperiences))
+    return this.http.get<IndustryExperience[]>(`${this.baseUrl}data/industry-experiences.json`).pipe(
+      map(data => this.sortSkills(data))
     );
   }
 
   getEducation(): Observable<Education[]> {
-    return this.http.get<EducationsData>(`${this.baseUrl}data/educations.json`).pipe(
-      map(data => data.Educations || [])
-    );
+    return this.http.get<Education[]>(`${this.baseUrl}data/educations.json`);
   }
 
   getCertifications(): Observable<Certification[]> {
-    return this.http.get<CertificationData>(`${this.baseUrl}data/certifications.json`).pipe(
-      map(data => data.Certifications)
-    );
+    return this.http.get<Certification[]>(`${this.baseUrl}data/certifications.json`);
   }
 
   getSkillAreas(): Observable<SkillAreaCharacteristic[]> {
-    return this.http.get<SkillAreasData>(`${this.baseUrl}data/skill-areas-and-characteristics.json`).pipe(
-      map(data => data.SkillAreasAndCharacteristics)
-    );
+    return this.http.get<SkillAreaCharacteristic[]>(`${this.baseUrl}data/skill-areas-and-characteristics.json`);
   }
 
   getExperiences(): Observable<WorkExperience[]> {
-    return this.http.get<WorkExperiencesData>(`${this.baseUrl}data/work-experiences.json`).pipe(
-      map(data => this.sortExperiences(data.WorkExperiences || []))
+    return this.http.get<WorkExperience[]>(`${this.baseUrl}data/work-experiences.json`).pipe(
+      map(data => this.sortExperiences(data))
     );
   }
 
