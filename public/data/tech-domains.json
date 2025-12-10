@@ -5,5 +5,6 @@
   { "Skill": "SCRUM", "Years": 4, "Level": "Solid Experience and Knowledge", "Domain": "Project Management", "DomainIcon": "bi-kanban" },
   { "Skill": "Requirement management", "Years": 1, "Level": "Basic Experience and Knowledge", "Domain": "Project Management", "DomainIcon": "bi-kanban" },
   { "Skill": "RUP", "Years": 1, "Level": "Basic Experience and Knowledge", "Domain": "Project Management", "DomainIcon": "bi-kanban" },
-  { "Skill": "Support", "Years": 0.5, "Level": "Basic Experience and Knowledge", "Domain": "Operations & Support", "DomainIcon": "bi-headset" }
+  { "Skill": "Support", "Years": 0.5, "Level": "Basic Experience and Knowledge", "Domain": "Operations & Support", "DomainIcon": "bi-headset" },
+  { "Skill": "CI/CD", "Years": 4, "Level": "Solid Experience and Knowledge", "Domain": "CI/CD", "DomainIcon": "bi-rocket"}
 ]
