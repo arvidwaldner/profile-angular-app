@@ -28,6 +28,7 @@
   { "Skill": "Typescript", "Years": 0.5, "Level": "Basic Experience and Knowledge", "Domain": "Frontend / Web", "DomainIcon": "bi-browser-chrome" },
   { "Skill": "npm", "Years": 0.5, "Level": "Basic Experience and Knowledge", "Domain": "Frontend / Web", "DomainIcon": "bi-browser-chrome" },
   { "Skill": "Vite", "Years": 0.5, "Level": "Basic Experience and Knowledge", "Domain": "Frontend / Web", "DomainIcon": "bi-browser-chrome" },
+  { "Skill": "Docker", "Years": 0.5, "Level": "Basic Experience and Knowledge", "Domain": "Infrastructure / DevOps", "DomainIcon": "bi-gear" },
   { "Skill": "SQL Server Reporting Services", "Years": 0.5, "Level": "Basic Experience and Knowledge", "Domain": "Database", "DomainIcon": "bi-database" },
   { "Skill": "Powershell", "Years": 0.5, "Level": "Basic Experience and Knowledge", "Domain": "Infrastructure / DevOps", "DomainIcon": "bi-gear" },
   { "Skill": "PLSQL", "Years": 0.5, "Level": "Basic Experience and Knowledge", "Domain": "Database", "DomainIcon": "bi-database" }
